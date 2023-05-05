@@ -69,7 +69,7 @@ class Appointments extends Component {
   }
 
   render() {
-    const {isActive} = this.state
+    const {isActive,titleInput, dateInput} = this.state
 
     const addClassName = isActive ? 'filled' : 'stared-button'
 
@@ -89,6 +89,7 @@ class Appointments extends Component {
                 placeholder="title"
                 id="title"
                 onChange={this.getTitle}
+                value={titleInput}
               />
 
               <label className="label-element" htmlFor="date">
@@ -99,6 +100,7 @@ class Appointments extends Component {
                 id="date"
                 type="date"
                 onChange={this.getDate}
+                value={dateInput}
               />
 
               <button className="add-button" type="submit">
